@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--<color name="colorPrimary">#3F51B5</color>-->
+    <!--<color name="colorPrimaryDark">#303F9F</color>-->
+    <!--<color name="colorAccent">#FF4081</color>-->
+
+    <color name="primary">#F44336</color>
+    <color name="primary_dark">#D32F2F</color>
+    <color name="primary_light">#FFCDD2</color>
+
+    <color name="colorNormal">#ff7b2d</color>
+
+    <color name="accent">#CDDC39</color>
+    <color name="primary_text">#212121</color>
+    <color name="secondary_text">#727272</color>
+    <color name="icons">#FFFFFF</color>
+    <color name="divider">#B6B6B6</color>
+
+    <color name="sv_blue">#688fdb</color>
+
+    <color name="TextColorWhite">#FFFFFFFF</color>
+    <color name="TextColorWhiteGray">#fafafa</color>
+    <color name="TextColorWhiteGrayMore">#ededf2</color>
+    <color name="TextColorGray">#909090</color>
+    <color name="TextColorBlack">#454545</color>
+    <color name="TextColorRed">#ff3b2f</color>
+    <color name="TextColorBlue">#157efb</color>
+    <color name="TextColorWhiteLight">#EBEBEB</color>
+    <color name="BackgroundWhite">#f5f5f9</color>
+    <color name="blue_light">#ff138eea</color>
+    <color name="order_no_confirm_divider">#ffc29e</color>
+    <color name="order_no_confirm_text_color">#666</color>
+
+    <color name="google_red">#d62d20</color>
+    <color name="google_blue">#0057e7</color>
+    <color name="google_green">#008744</color>
+    <color name="google_yellow">#ffa700</color>
+
+    <color name="transparent">#00000000</color>
+    <color name="device_normal">#fff3980f</color>
+
+</resources>
