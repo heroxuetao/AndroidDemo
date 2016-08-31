@@ -35,15 +35,17 @@
         <activity android:name=".EventBus.EventBusActivity" />
         <activity android:name=".TestActivity" />
         <activity android:name=".ElemeShoppingView.ElemeShoppingViewActivity" />
-        <activity android:name=".CustomViewActivity"></activity>
+        <activity android:name=".CustomViewActivity" />
 
         <meta-data
             android:name="UMENG_APPKEY"
             android:value="57b154bae0f55a373c002f6f" />
-
         <meta-data
             android:name="UMENG_CHANNEL"
             android:value="abc" />
+
+        <activity android:name=".HideOrShowToolbar.HideOrShowToolbarActivity" />
+        <activity android:name=".HideOrShowToolbar.HideOrShowToolbarActivity2"></activity>
     </application>
 
 </manifest>

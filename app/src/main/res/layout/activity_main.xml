@@ -10,55 +10,72 @@
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="cn.cbapay.demo2.MainActivity">
 
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startNewsActivity"
-        android:text="news"
-        android:textAllCaps="false" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startCircularProgressButtonActivity"
-        android:text="circular-progress-button"
-        android:textAllCaps="false" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startGoogleProgressBarActivity"
-        android:text="Google ProgressBar Activity"
-        android:textAllCaps="false" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startNewsActivity"
+                android:text="news"
+                android:textAllCaps="false" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startEventBusActivity"
-        android:text="EventBus 3.0"
-        android:textAllCaps="false" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startCircularProgressButtonActivity"
+                android:text="circular-progress-button"
+                android:textAllCaps="false" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startTestActivity"
-        android:text="Normal Test"
-        android:textAllCaps="false" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startGoogleProgressBarActivity"
+                android:text="Google ProgressBar Activity"
+                android:textAllCaps="false" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startElemeShoppingViewActivity"
-        android:text="ElemeShoppingView"
-        android:textAllCaps="false" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startEventBusActivity"
+                android:text="EventBus 3.0"
+                android:textAllCaps="false" />
 
-    <Button
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:onClick="startCustomViewActivity"
-        android:text="CustomView"
-        android:textAllCaps="false" />
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startTestActivity"
+                android:text="Normal Test"
+                android:textAllCaps="false" />
 
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startElemeShoppingViewActivity"
+                android:text="ElemeShoppingView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startCustomViewActivity"
+                android:text="CustomView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startHideOrShowToolbarViewActivity"
+                android:text="HideOrShowToolbar"
+                android:textAllCaps="false" />
+        </LinearLayout>
+    </ScrollView>
 
 </LinearLayout>

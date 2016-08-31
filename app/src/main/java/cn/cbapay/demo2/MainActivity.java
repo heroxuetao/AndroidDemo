@@ -10,6 +10,7 @@ import com.umeng.analytics.MobclickAgent;
 import cn.cbapay.demo2.ElemeShoppingView.ElemeShoppingViewActivity;
 import cn.cbapay.demo2.EventBus.EventBusActivity;
 import cn.cbapay.demo2.GoogleProgressBar.GoogleProgressBarActivity;
+import cn.cbapay.demo2.HideOrShowToolbar.HideOrShowToolbarActivity;
 import cn.cbapay.demo2.News.NewsActivity;
 import cn.cbapay.demo2.circularProgressButton.CircularProgressButtonActivity;
 
@@ -62,6 +63,13 @@ public class MainActivity extends AppCompatActivity {
     public void startCustomViewActivity(View v) {
         Intent i = new Intent();
         i.setClass(this, CustomViewActivity.class);
+        startActivity(i);
+    }
+
+    public void startHideOrShowToolbarViewActivity(View v) {
+        Intent i = new Intent();
+        i.setClass(this, HideOrShowToolbarActivity.class);
+//        i.setClass(this, HideOrShowToolbarActivity2.class);
         startActivity(i);
     }
 
