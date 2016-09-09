@@ -45,7 +45,10 @@
             android:value="abc" />
 
         <activity android:name=".HideOrShowToolbar.HideOrShowToolbarActivity" />
-        <activity android:name=".HideOrShowToolbar.HideOrShowToolbarActivity2"></activity>
+        <activity android:name=".HideOrShowToolbar.HideOrShowToolbarActivity2" />
+        <activity android:name=".WatchView.WatchViewActivity" />
+        <activity android:name=".TemperatureView.TemperatureViewActivity" />
+        <activity android:name=".bezier.BezierActivity"></activity>
     </application>
 
 </manifest>

@@ -75,6 +75,27 @@
                 android:onClick="startHideOrShowToolbarViewActivity"
                 android:text="HideOrShowToolbar"
                 android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startWatchViewActivity"
+                android:text="WatchView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startTemperatureViewActivity"
+                android:text="TemperatureView"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startBezierActivity"
+                android:text="BezierActivity"
+                android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>
 

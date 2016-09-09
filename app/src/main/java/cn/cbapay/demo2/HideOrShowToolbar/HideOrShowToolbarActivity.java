@@ -61,8 +61,8 @@ public class HideOrShowToolbarActivity extends AppCompatActivity {
 
     private void init() {
         View header = new View(this);
-//        header.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT,
-//                (int) getResources().getDimension(R.dimen.action_bar_height)));
+        header.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT,
+                (int) getResources().getDimension(R.dimen.action_bar_height)));
 
         header.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT, 0));
         mListView.addHeaderView(header);

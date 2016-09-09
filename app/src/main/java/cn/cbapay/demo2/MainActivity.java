@@ -12,6 +12,9 @@ import cn.cbapay.demo2.EventBus.EventBusActivity;
 import cn.cbapay.demo2.GoogleProgressBar.GoogleProgressBarActivity;
 import cn.cbapay.demo2.HideOrShowToolbar.HideOrShowToolbarActivity;
 import cn.cbapay.demo2.News.NewsActivity;
+import cn.cbapay.demo2.TemperatureView.TemperatureViewActivity;
+import cn.cbapay.demo2.WatchView.WatchViewActivity;
+import cn.cbapay.demo2.bezier.BezierActivity;
 import cn.cbapay.demo2.circularProgressButton.CircularProgressButtonActivity;
 
 public class MainActivity extends AppCompatActivity {
@@ -70,6 +73,24 @@ public class MainActivity extends AppCompatActivity {
         Intent i = new Intent();
         i.setClass(this, HideOrShowToolbarActivity.class);
 //        i.setClass(this, HideOrShowToolbarActivity2.class);
+        startActivity(i);
+    }
+
+    public void startWatchViewActivity(View v) {
+        Intent i = new Intent();
+        i.setClass(this, WatchViewActivity.class);
+        startActivity(i);
+    }
+
+    public void startTemperatureViewActivity(View v) {
+        Intent i = new Intent();
+        i.setClass(this, TemperatureViewActivity.class);
+        startActivity(i);
+    }
+
+    public void startBezierActivity(View v) {
+        Intent i = new Intent();
+        i.setClass(this, BezierActivity.class);
         startActivity(i);
     }
 

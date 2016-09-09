@@ -39,4 +39,10 @@
     <color name="transparent">#00000000</color>
     <color name="device_normal">#fff3980f</color>
 
+    <!--指针左半部分颜色-->
+    <color name="leftPointer">#e1dcd6</color>
+    <!--指针右半部分颜色-->
+    <color name="rightPointer">#f4efe9</color>
+    <!--背景颜色-->
+    <color name="temperatureBackground">#FFFAFA</color>
 </resources>

@@ -1,16 +1,15 @@
 package cn.cbapay.demo2.HideOrShowToolbar;
 
-import android.animation.Animator;
-import android.animation.ObjectAnimator;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
-import android.util.Log;
-import android.view.MotionEvent;
 import android.view.View;
-import android.view.ViewConfiguration;
-import android.widget.AbsListView;
-import android.widget.ListView;
+
+import com.zhy.base.adapter.ViewHolder;
+import com.zhy.base.adapter.recyclerview.CommonAdapter;
+import com.zhy.base.adapter.recyclerview.DividerItemDecoration;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,15 +19,8 @@ import cn.cbapay.demo2.R;
 public class HideOrShowToolbarActivity2 extends AppCompatActivity {
 
     private Toolbar mToolbar;
-    private AddRemarkAdapter mAdapter;
-    private ListView mListView;
-
-    private int mTouchSlop;
-    private float mFirstY;
-    private float mCurrentY;
-    private int direction;
-    private boolean mShow;
-    private Animator mAnimator;
+    private CommonAdapter mCommonAdapter;
+    private RecyclerView mRecyclerView;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -43,90 +35,30 @@ public class HideOrShowToolbarActivity2 extends AppCompatActivity {
                 finish();
             }
         });
-        mListView = (ListView) findViewById(R.id.list_view);
+        mRecyclerView = (RecyclerView) findViewById(R.id.id_recycler_view);
+        mRecyclerView.setLayoutManager(new LinearLayoutManager(this));
+        mRecyclerView.addItemDecoration(new DividerItemDecoration(this, DividerItemDecoration.VERTICAL_LIST));
 
         List<String> mList = new ArrayList<>();
         for (int i = 0; i < 100; i++) {
             mList.add(i + "");
         }
+//
+//        mAdapter = new AddRemarkAdapter(this);
+//        mListView.setAdapter(mAdapter);
+//
+//        mAdapter.setItems(mList);
+        mCommonAdapter = new CommonAdapter<String>(this, R.layout.item_string, mList) {
 
-        mAdapter = new AddRemarkAdapter(this);
-        mListView.setAdapter(mAdapter);
+            @Override
+            public void convert(ViewHolder holder, String str) {
 
-        mAdapter.setItems(mList);
-
-        init();
-
-    }
-
-    private void init() {
-        View header = new View(this);
-//        header.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT,
-//                (int) getResources().getDimension(R.dimen.action_bar_height)));
-
-        header.setLayoutParams(new AbsListView.LayoutParams(AbsListView.LayoutParams.MATCH_PARENT, 0));
-        mListView.addHeaderView(header);
-        mTouchSlop = ViewConfiguration.get(this).getScaledTouchSlop();
-
-        mListView.setOnTouchListener(myTouchListener);
-
-        Log.e("xuetao", "--mTouchSlop---->>" + mTouchSlop);
-    }
-
-    View.OnTouchListener myTouchListener = new View.OnTouchListener() {
-
-        @Override
-        public boolean onTouch(View v, MotionEvent event) {
-            switch (event.getAction()) {
-                case MotionEvent.ACTION_DOWN:
-                    mFirstY = event.getY();
-                    Log.e("xuetao", "--mFirstY---->>" + mFirstY);
-                    break;
-
-                case MotionEvent.ACTION_MOVE:
-                    mCurrentY = event.getY();
-                    if (mCurrentY > mFirstY) {//向下
-                        if ((mCurrentY - mFirstY) > mTouchSlop) {
-                            direction = 1;//下
-                            if (!mShow) {
-                                animToolBar(direction);//显示toolBar
-                                mShow = !mShow;
-                            }
-                        }
-                    } else {
-                        if ((mFirstY - mCurrentY) > mTouchSlop) {
-                            direction = 0;//上
-                            if (mShow) {
-                                animToolBar(direction);//隐藏toolBar
-                                mShow = !mShow;
-                            }
-                        }
-                    }
-
-
-                    break;
-
-                case MotionEvent.ACTION_UP:
-                    break;
+                holder.setText(R.id.tv, String.valueOf(str));
 
             }
 
-            return false;
-        }
-
-    };
-
-    private void animToolBar(int flag) {
-
-        if (mAnimator != null && mAnimator.isRunning()) {
-            mAnimator.cancel();
-        }
-        if (flag == 0) {//向上滑隐藏toolBar
-            mAnimator = new ObjectAnimator().ofFloat(mToolbar, "translationY", mToolbar.getTranslationY(), -mToolbar.getHeight());
-        } else {//向下滑
-            mAnimator = new ObjectAnimator().ofFloat(mToolbar, "translationY", mToolbar.getTranslationY(), 0);
-        }
-
-        mAnimator.start();
+        };
+        mRecyclerView.setAdapter(mCommonAdapter);
     }
+
 }
