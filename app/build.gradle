@@ -2,7 +2,7 @@ apply plugin: 'com.android.application'
 
 android {
     compileSdkVersion 24
-    buildToolsVersion "23.0.2"
+    buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "cn.cbapay.demo2"
@@ -35,4 +35,12 @@ dependencies {
     compile 'org.greenrobot:eventbus:3.0.0'
     compile 'com.zhy:base-adapter:2.0.0'
     compile files('libs/umeng-analytics-v5.6.1.jar')
+    compile project(path: ':CameraModule')
+    compile 'me.immortalz:transitionhelper:1.0.4'
+    compile 'com.github.baoyachi:StepView:1.9'
+    compile 'com.github.blackfizz:eazegraph:1.2.2@aar'
+    compile 'com.nineoldandroids:library:2.4.0'
+    compile 'com.github.lecho:hellocharts-library:1.5.8@aar'
+    compile 'com.github.PhilJay:MPAndroidChart:v3.0.1'
+    compile 'com.android.support.constraint:constraint-layout:1.0.0-beta4'
 }

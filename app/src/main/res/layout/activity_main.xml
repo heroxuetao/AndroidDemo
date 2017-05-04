@@ -17,12 +17,14 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:weightSum="1">
 
 
             <Button
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:layout_weight="1"
                 android:onClick="startNewsActivity"
                 android:text="news"
                 android:textAllCaps="false" />
@@ -95,6 +97,34 @@
                 android:layout_height="wrap_content"
                 android:onClick="startBezierActivity"
                 android:text="BezierActivity"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startCameraActivity"
+                android:text="CameraActivity"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startTransitionHelperActivity"
+                android:text="TransitionHelper"
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startStepViewActivity"
+                android:text="StepView "
+                android:textAllCaps="false" />
+
+            <Button
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:onClick="startGraphactivity"
+                android:text="Graph"
                 android:textAllCaps="false" />
         </LinearLayout>
     </ScrollView>

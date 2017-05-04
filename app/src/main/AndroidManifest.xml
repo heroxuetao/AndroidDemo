@@ -6,8 +6,13 @@
     <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.CAMERA" />
+
+    <uses-feature android:name="android.hardware.camera" />
+    <uses-feature android:name="android.hardware.camera.autofocus" />
 
     <application
+        android:name=".app.App"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -48,7 +53,16 @@
         <activity android:name=".HideOrShowToolbar.HideOrShowToolbarActivity2" />
         <activity android:name=".WatchView.WatchViewActivity" />
         <activity android:name=".TemperatureView.TemperatureViewActivity" />
-        <activity android:name=".bezier.BezierActivity"></activity>
+        <activity android:name=".bezier.BezierActivity" />
+        <activity android:name=".camera.CameraActivity" />
+        <activity
+            android:name=".ScrollingActivity"
+            android:label="@string/title_activity_scrolling"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".TransitionHelper.BeginActivity" />
+        <activity android:name=".TransitionHelper.EndActivity" />
+        <activity android:name=".StepView.StepViewActivity" />
+        <activity android:name=".Graph.GraphActivity"></activity>
     </application>
 
 </manifest>
